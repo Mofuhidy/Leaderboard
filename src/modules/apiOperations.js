@@ -13,4 +13,10 @@ const createScore = async (user, score) => {
   return response;
 };
 
-export default createScore;
+const getScore = async () => {
+  const res = await fetch(apiUrl);
+  const jsonRes = await res.json();
+  return jsonRes;
+};
+
+export { createScore, getScore };
