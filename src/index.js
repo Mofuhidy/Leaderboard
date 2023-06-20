@@ -1,6 +1,15 @@
 import './style.css';
-import players from './modules/players.js';
+import createScore from './modules/apiOperations.js';
+import Board from './modules/leadrBoard.js';
 
-const playersScores = document.querySelector('.scores-list');
+const submit = document.getElementById('submit');
 
-playersScores.innerHTML = players.map((player) => `<tr><td>${player.name}: ${player.score}</td></tr>`).join('');
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+  const player = document.getElementById('player');
+  const score = document.getElementById('score');
+
+  createScore(player.value, score.value);
+  player.value = '';
+  score.value = '';
+});
