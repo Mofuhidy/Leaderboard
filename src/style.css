@@ -48,6 +48,7 @@ h1 {
   align-items: center;
   font-size: 2.2rem;
   margin-bottom: 20px;
+  order: 1;
 }
 
 .game-container {
@@ -134,19 +135,26 @@ button {
     align-items: center;
   }
 
+  h1 {
+    align-self: start;
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  main h1 {
+    position: absolute;
+    top: -90px;
+    left: -15px;
+  }
+
   .game-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
     min-width: 800px;
-    margin-top: 25px;
-  }
-
-  h1 {
-    align-self: start;
-    font-size: 2.5rem;
-    font-weight: 900;
+    position: relative;
+    top: 100px;
   }
 
   h3 {
